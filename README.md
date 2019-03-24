@@ -1,2 +1,1 @@
-# Hangman
-Hangman game made in JS (WIP!)
+https://adamjeanlaurent.github.io/Hangman/ WIP

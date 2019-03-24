@@ -15,15 +15,19 @@ document.addEventListener("keypress",function(event){
 
 function checkInput(key){
     if(word.indexOf(key) === -1 && lettersGuessed.indexOf(key) == -1){ 
-        lettersGuessed.push(key);
-        document.querySelector(".letterBox").textContent += ( " " + key); 
-        wrong++;
-        document.querySelector(".counter").textContent = "Guesses Left: " + (6 - wrong);
-        if(wrong === 6){
-            lose();
-        }
+            lettersGuessed.push(key);
+            document.querySelector(".letterBox").textContent += ( " " + key); 
+            wrong++;
+            document.querySelector(".counter").textContent = "Guesses Left: " + (6 - wrong);
+            if(wrong === 6){
+                lose();
+            }
     }
     else{
+        if(lettersGuessed.indexOf(key) == -1){
+            lettersGuessed.push(key);
+            document.querySelector(".letterBox").textContent += ( " " + key);
+        }
         for(var i = 0; i < word.length; i++){
             if(key === word[i]){
                 // document.querySelector(".spot" + i).classList.add("pressed");
@@ -128,4 +132,3 @@ function reset(){
     document.querySelector(".gameTitle").textContent = "Press Any Key To Play!";
     document.querySelector(".counter").textContent = "Guesses Left:";
 }
-

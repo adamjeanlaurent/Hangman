@@ -1,8 +1,4 @@
-/*
-TODO
-add animations 
-limit amount of characters
-*/
+var lettersGuessed = [];
 var j;
 var word;
 var wrong = 0;
@@ -18,7 +14,9 @@ document.addEventListener("keypress",function(event){
 });
 
 function checkInput(key){
-    if(word.indexOf(key) === -1){   
+    if(word.indexOf(key) === -1 && lettersGuessed.indexOf(key) == -1){ 
+        lettersGuessed.push(key);
+        document.querySelector(".letterBox").textContent += ( " " + key); 
         wrong++;
         document.querySelector(".counter").textContent = "Guesses Left: " + (6 - wrong);
         if(wrong === 6){
@@ -123,6 +121,7 @@ function reset(){
     for(var i = 0; i < numOfSpaces.length; i++){
         parent.removeChild(numOfSpaces[i]);
     }
+    document.querySelector(".letterBox").textContent = "";
     started = false;
     wrong = 0;
     word = "";
@@ -130,7 +129,3 @@ function reset(){
     document.querySelector(".counter").textContent = "Guesses Left:";
 }
 
-
-// function animate(){
-//     document.querySelector(".spot" + j).classList.remove("pressed");
-// }

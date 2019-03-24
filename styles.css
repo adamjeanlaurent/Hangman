@@ -17,6 +17,7 @@ body{
     font-size: 20px;
     vertical-align: top;
     border-radius: 25px;
+    line-height: 2.5;
 }
 
 
@@ -39,7 +40,6 @@ body{
     text-align: center;
     font-size: 3rem;
     color: #FEF2BF;
-    font-family: 'Press Start 2P', cursive;
 }
 
 
@@ -55,12 +55,10 @@ body{
 
  .counter{
      text-align: center;
-     font-family: 'Press Start 2P', cursive;
      color: #FEF2BF;
  }
 
  .hangman{
-    font-family: 'Press Start 2P', cursive;
     font-size: 3rem;
     text-align: center;
     color: #FEF2BF;
@@ -69,3 +67,15 @@ body{
  .pressed {
     background-color: #c82121;
   }
+
+.lettersGuessed{
+    text-align: center;
+    background-color: white;
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    left: 55px;
+    top: 200px;
+    word-wrap: break-word;
+    border-radius: 25px;
+}

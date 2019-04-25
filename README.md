@@ -1,1 +1,1 @@
-https://adamjeanlaurent.github.io/Hangman/ WIP
+https://adamjeanlaurent.github.io/Hangman/  <----- Play At This Link!
